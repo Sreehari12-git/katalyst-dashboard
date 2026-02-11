@@ -2,17 +2,17 @@
  document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = sessionStorage.getItem("loggedIn");
     if (isLoggedIn !== "true") {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
  });
     document.getElementById("logoutBtn").addEventListener("click", () => {
         sessionStorage.removeItem("loggedIn");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 
  document.getElementById("logoutBtn").addEventListener("click", () => {
     localStorage.removeItem("loggedIn");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
  });
  flatpickr("#dateRange", {
   mode: "range",            // enables selecting start and end date
