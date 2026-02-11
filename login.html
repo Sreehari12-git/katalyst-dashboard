@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalyst</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-conatiner">
+        <h1 class="logo">Katalyst</h1>
+        <h3>Sign in to your account</h3>
+        <form id="loginForm">
+            <div class="change">
+                <label class="info" for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label class="info" for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <a href="#" class="forgot">Forgot password</a>
+
+            <button type="submit">Sign In</button>
+        </form>
+        <p id="error" class="error"></p>
+        <script src="JS/auth.js"></script>
+    </div>
+</body>
+</html>

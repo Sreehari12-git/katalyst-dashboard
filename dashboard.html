@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalyst Dashboard</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="company">
+                <span class="logo"></span>
+                <span>Default Company</span>
+            </div>
+            <input type="text" placeholder="Search projects" class="search">
+            <button class="add-project">Add Project</button>
+        </aside>
+        <main class="content">
+            <div class="logout">
+                        <button id="logoutBtn">Logout</button>
+                    </div>
+            <header class="header">
+                <div class="greeting">
+                    <div>
+                        <h2>Good evening, Onion Gnapi</h2>
+                        <p>You have 0 test cases due this week and 0 pending approvals</p>
+                    </div>
+                    <div class="date">
+                        <h2>Today</h2>
+                        <span>Monday, Feb 09</span>
+                    </div>
+                </div>
+            </header>
+            <section class="filter">
+                <div class="filter-by">
+                    <span>Filter by</span>
+                    <input type="text" placeholder="Search projects">
+                </div>
+            </section>
+            <section class="stats">
+                <div class="stat-card">
+                    <p>Total Test Case</p>
+                    <h3>0</h3>
+                </div>
+                <div class="stat-card success">
+                    <p>Approved Test Cases</p>
+                    <h3>0</h3>
+                </div>
+                <div class="stat-card danger">
+                    <p>Rejected Test Cases</p>
+                    <h3>0</h3>
+                </div>
+                 <div class="stat-card warning">
+                    <p>Pending Test Cases</p>
+                    <h3>0</h3>
+                </div>
+                 <div class="stat-card purple">
+                    <p>Request Changes</p>
+                    <h3>0</h3>
+                </div>
+            </section>
+            <section class="grid">
+                <div class="panel large">
+                    <div class="panel-header">
+                        <h3>Test Runs</h3>
+                    <input type="text" id="dateRange" placeholder="Select date range">
+                    </div>
+                    <div class="empty">
+                        <h4>No test runs found</h4>
+                        <p>
+                            You haven't executed any test runs yet. Start by creating a test plan and executing your first test run to see results here.
+                        </p>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE -->
+                <div class="side-panels">
+                    <div class="panel">
+                        <h3>Key Metrics</h3>
+                        <div class="metric">
+                            <span>Test Coverage</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="metric">
+                            <span>Automation Ratio</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="metric">
+                            <span>Team Utilization</span>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>Pass/Fail Overview</h3>
+                        <p class="muted">Current execution success breakdown</p>
+                        <div class="empty small">No data to display</div>
+                    </div>
+                </div>
+            </section>
+            <!-- RECENT ACTIVITY -->
+             <section class="panel">
+                <h3>Recent Activity</h3>
+             </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="JS/dashboard.js"></script>
+</body>
+</html>
