@@ -181,3 +181,35 @@ body {
     border: none;
     cursor: pointer;
 }
+.date-range-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.date-range-wrapper input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 110px;
+    background: transparent;
+}
+
+.date-range-wrapper input::placeholder {
+    color: #aaa;
+}
+
+.arrow {
+    color: #999;
+    font-size: 14px;
+}
+
+.calendar-icon {
+    cursor: pointer;
+    color: #777;
+    font-size: 16px;
+}

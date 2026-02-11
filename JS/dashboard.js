@@ -14,19 +14,29 @@
     localStorage.removeItem("loggedIn");
     window.location.href = "index.html";
  });
- flatpickr("#dateRange", {
-  mode: "range",            // enables selecting start and end date
-  dateFormat: "Y-m-d",      // format as YYYY-MM-DD
-  onClose: function(selectedDates) {
-    if (selectedDates.length === 2) {
-      const startDate = selectedDates[0];
-      const endDate = selectedDates[1];
-
-      if (endDate <= startDate) {
-        alert("End date must be greater than start date");
-        document.getElementById("dateRange").value = "";
-      }
+ const startPicker = flatpickr("#startDate", {
+    dateFormat: "Y-m-d",
+    onChange: function (selectedDates) {
+        if (selectedDates.length > 0) {
+            endPicker.set("minDate", selectedDates[0]);
+        }
     }
-  }
 });
 
+const endPicker = flatpickr("#endDate", {
+    dateFormat: "Y-m-d",
+    onChange: function (selectedDates) {
+        const startDate = startPicker.selectedDates[0];
+        const endDate = selectedDates[0];
+
+        if (startDate && endDate <= startDate) {
+            alert("End date must be greater than start date");
+            endPicker.clear();
+        }
+    }
+});
+
+// Optional: click calendar icon opens start date picker
+document.getElementById("calendarTrigger").addEventListener("click", function () {
+    startPicker.open();
+});

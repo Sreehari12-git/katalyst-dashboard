@@ -65,8 +65,15 @@
                 <div class="panel large">
                     <div class="panel-header">
                         <h3>Test Runs</h3>
-                    <input type="text" id="dateRange" placeholder="Select date range">
+
+                        <div class="date-range-wrapper">
+                         <input type="text" id="startDate" placeholder="Start date">
+                        <span class="arrow">→</span>
+                        <input type="text" id="endDate" placeholder="End date">
+                        <span class="calendar-icon" id="calendarTrigger">📅</span>
+                        </div>
                     </div>
+
                     <div class="empty">
                         <h4>No test runs found</h4>
                         <p>
