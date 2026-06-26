@@ -36,7 +36,6 @@ const endPicker = flatpickr("#endDate", {
     }
 });
 
-// Optional: click calendar icon opens start date picker
 document.getElementById("calendarTrigger").addEventListener("click", function () {
     startPicker.open();
 });
